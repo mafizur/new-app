@@ -1,11 +1,12 @@
 .App {
   text-align: center;
 }
+.container{
+  padding-bottom: 50px;
+}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.App-logo img {
+  height: 50px;
 }
 
 .App-header {
@@ -21,6 +22,49 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.footer{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background: #ddd;
+}
+.btn{
+  margin: 7px;
+}
+ul.suggestions{
+  list-style-type: square;
+  margin-left: 0px;
+  padding-left: 0px;
+  color: green;
+  font-weight: bold;
+}
+ul.suggestions li{
+  display: inline;
+  padding-right: 20px;
+}
+
+.single-image{
+  width: 50%;
+  height: auto;
+  float: left;
+  padding: 15px;
+}
+
+.single-image img{
+  width: 100%;
+  height: 300px;
+}
+.galleryTab {
+    margin-bottom: 100px;
+    height: auto;
+    float: left;
+    width: 100%;
 }
 
 @keyframes App-logo-spin {
