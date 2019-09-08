@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2019 at 05:39 PM
+-- Generation Time: Sep 08, 2019 at 06:16 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -34,6 +34,14 @@ CREATE TABLE `image_gallery` (
   `crate_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `image_gallery`
+--
+
+INSERT INTO `image_gallery` (`id`, `title`, `link`, `tags`, `crate_date`) VALUES
+(1, 'Image 1', 'https://thumbs.dreamstime.com/b/focus-amazing-stamens-st-john-s-wort-flower-flower-golden-color-length-multiple-stamens-wondering-st-151207273.jpg', NULL, '2019-09-08 16:10:46'),
+(2, 'Image 2', 'https://q7i2y6d5.stackpathcdn.com/wp-content/uploads/2019/03/balloon-flower-400x267.jpg', NULL, '2019-09-08 16:14:25');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +54,15 @@ CREATE TABLE `image_tags` (
   `tags` varchar(255) DEFAULT NULL,
   `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `image_tags`
+--
+
+INSERT INTO `image_tags` (`id`, `image_gallery_id`, `tags`, `create_at`) VALUES
+(1, 1, 'Top Image', '2019-09-08 16:10:46'),
+(2, 1, 'Recent Image', '2019-09-08 16:10:46'),
+(3, 2, 'Top Image', '2019-09-08 16:14:25');
 
 --
 -- Indexes for dumped tables
@@ -71,12 +88,12 @@ ALTER TABLE `image_tags`
 -- AUTO_INCREMENT for table `image_gallery`
 --
 ALTER TABLE `image_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `image_tags`
 --
 ALTER TABLE `image_tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
