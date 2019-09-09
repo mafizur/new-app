@@ -16,7 +16,7 @@ export default class Index extends Component {
       };
     }
     componentDidMount(){
-      axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/tag-list')
+      axios.get('http://mysoftheaven.com/lrb/getapi/v1/imagelist/tag-list')
         .then(response => {
           this.setState({ business: response.data.tagList });
           this.setState({ results: response.data.imageList });
@@ -28,7 +28,7 @@ export default class Index extends Component {
     tabs(e) {
       const { title } = e.target.dataset;
         var value='lll';
-        axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/tag-image-list?searchvalue='+title)
+        axios.get('http://mysoftheaven.com/lrb/getapi/v1/imagelist/tag-image-list?searchvalue='+title)
 	      .then(({ data }) => {
 	        this.setState({
 	          results: data.imageList
