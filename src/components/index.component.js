@@ -11,7 +11,7 @@ export default class Index extends Component {
       this.state = {data: []};
     }
     componentDidMount(){
-      axios.get('http://localhost/api/v1/imagelist/image-list')
+      axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/image-list')
         .then(response => {
           this.setState({ data: response.data.imageList });
         })

@@ -22,7 +22,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost/api/v1/imagelist/single-image-list?id='+this.props.match.params.id)
+    axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/single-image-list?id='+this.props.match.params.id)
         .then(response => {
             this.setState({ 
               title: response.data.imageList.title, 
@@ -35,7 +35,7 @@ export default class Edit extends Component {
   }
 
   getInfo = () => {
-    axios.get('http://localhost/api/v1/imagelist/query?searchvalue='+this.state.query)
+    axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/query?searchvalue='+this.state.query)
       .then(({ data }) => {
         this.setState({
           results: data.tagList
@@ -73,7 +73,7 @@ export default class Edit extends Component {
     };
     axios({
       method: 'post',
-      url: 'http://localhost/api/v1/image/update-image',
+      url: 'http://mysoftheaven.com/lrb/api/v1/image/update-image',
       data: obj
     })
     .then(function (response) {

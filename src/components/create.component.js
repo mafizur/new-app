@@ -21,7 +21,7 @@ export default class Create extends Component {
     }
   }
  getInfo = () => {
-    axios.get('http://localhost/api/v1/imagelist/query?searchvalue='+this.state.query)
+    axios.get('http://mysoftheaven.com/lrb/api/v1/imagelist/query?searchvalue='+this.state.query)
       .then(({ data }) => {
         this.setState({
           results: data.tagList
@@ -58,7 +58,7 @@ export default class Create extends Component {
 
     axios({
 	    method: 'post',
-	    url: 'http://localhost/api/v1/image/save-image',
+	    url: 'http://mysoftheaven.com/lrb/api/v1/image/save-image',
 	    data: body
   	})
   	.then(function (response) {

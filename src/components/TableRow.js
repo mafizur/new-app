@@ -17,7 +17,7 @@ class TableRow extends Component {
 
       axios({
         method: 'post',
-        url: 'http://localhost/api/v1/image/delete-image',
+        url: 'http://mysoftheaven.com/lrb/api/v1/image/delete-image',
         data: body
       })
       .then(function (response) {
